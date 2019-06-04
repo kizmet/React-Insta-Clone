@@ -9,20 +9,50 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      dummyData: dummyData
+      dummyData: [],
+      searchText: ''
     };
-
+    this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
   }
 
+
+  componentDidMount() {
+    localStorage.setItem('dummyDataSaved', JSON.stringify(dummyData));
+    let savedData = localStorage.getItem('dummyDataSaved');
+    try {
+      savedData = JSON.parse(savedData);
+      this.setState({ dummyData: savedData});
+    } catch (err) {
+      console.log('error');
+    }
+  }
+  handleSearchTextChange(searchText) {   
+    this.setState({
+      searchText: searchText
+    });
+  }
+
+
   render () {
-    const {dummyData} = this.state;
+    //const {dummyData} = this.state;
   return (
-    <div className="App">
-      <SearchBar />
+    
+    <section className="App">
+      <nav>
+      <SearchBar
+      searchText={this.state.searchText}
+          onSearchTextChange={this.handleSearchTextChange}
+       />
+        </nav>
+        <main>
       <PostContainer
-        dummyData={dummyData} 
+        dummyData={this.state.dummyData} 
+        searchText={this.state.searchText}
       />
-    </div>
+        </main>
+      
+      </section>
+    
   );}
 }
 

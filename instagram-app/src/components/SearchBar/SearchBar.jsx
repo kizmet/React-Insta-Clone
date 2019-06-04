@@ -4,13 +4,36 @@ import './SearchBar.css';
 class SearchBar extends Component {
     constructor(props) {
         super(props);
-
+        this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
+    }
+    handleSearchTextChange(e) {
+        this.props.onSearchTextChange(e.target.value)
     }
     render () {
         return (
             <div className="search_bar_wrapper">
                 <div className="search_bar_component">
-                <input type="text" name="" id=""/>
+                    <div className="search_bar_logo">
+                        <span id="ig"></span>
+                        <div className="bar"></div>
+                        <span id="instagram"></span>
+                    </div>
+                    <div className="search_bar_input">
+                         <input 
+                         className="input_text" 
+                         type="text" 
+                         name="" 
+                         id="" 
+                         placeholder="Search" 
+                         onChange={this.handleSearchTextChange}
+                         />
+                    </div>
+                    <div className="search_bar_profile">
+                        <span id="explore"></span>
+                        <span id="activity"></span>
+                        <span id="profile"></span>
+
+                    </div>
                 </div>
             </div>
         )

@@ -2,26 +2,47 @@ import React, { Component } from 'react';
 import './PostContainer.css';
 import Posts from 'components/Posts/Posts';
 
-const PostContainer = (props) => {
-    const dummyData = props.dummyData;
-    const posts = dummyData.map((post) =>
-    <Posts key={post.id}
-    imageUrl={post.imageUrl}
-    thumbnailUrl={post.thumbnailUrl}
-    username={post.username}
-    comments={post.comments}
-    likes={post.likes}
-    />
+const isText = searchText => {
+    return isNaN(searchText.length);
+}
 
-    );
-    return (
-        
-        <ul className="content">
-            {posts}
-        </ul>
-    )
+class PostContainer extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        const searchText = this.props.searchText;
+        const posts = [];
+        let lastPost = null;
+        this.props.dummyData.forEach((post) => {
+            if (post.username.indexOf(searchText) === -1) {
+                return;
+            }
+            if (post.id !== lastPost) {
+                posts.push(
+                    <Posts key={post.id}
+                        imageUrl={post.imageUrl}
+                        thumbnailUrl={post.thumbnailUrl}
+                        username={post.username}
+                        comments={post.comments}
+                        likes={post.likes}
+                    />
+                );
+            }
+            lastPost = post.id;
+        });
+
+        return (
+            <div className="post_container">
+                <ul className="content">
+                    {posts}
+                </ul>
+            </div>
+        );
+    }
 }
 
 
 
 export default PostContainer;
+
