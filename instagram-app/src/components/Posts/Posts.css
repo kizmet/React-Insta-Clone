@@ -1,0 +1,46 @@
+.li_wrapper {
+    width: 80%;
+    padding: 5%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    margin: 10% 0 10% 0;
+}
+
+.title {
+    text-align: left;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.title>* {
+    padding: .5rem .5rem .5rem 0;
+}
+
+.title>img {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.postImage {
+    width: 100%;
+}
+
+.postImage>img {
+    width: 40rem;
+
+}
+
+.comment_component {
+    text-align: left;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.likes_total {
+    width: 100%;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

@@ -1,0 +1,16 @@
+.search_bar_wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.search_bar_component {
+    width: 80%;
+    padding: 0 5%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    
+}

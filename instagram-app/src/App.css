@@ -1,0 +1,9 @@
+.App {
+    text-align: center;
+    width: 50rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
