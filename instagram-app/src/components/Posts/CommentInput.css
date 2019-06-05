@@ -1,0 +1,43 @@
+.comment_input_component {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 56px;
+    justify-content: center;
+    border-top: 1px solid #efefef;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: stretch;
+
+}
+
+.comment_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comment_text {
+    height: 1.8rem;
+    background: 0 0;
+    border: 0;
+    color: #262626;
+    outline: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.Submit_button {
+    opacity: .3;
+    pointer-events: none;
+    border: 0;
+    color: #3897f0;
+    display: inline;
+    padding: 0;
+    font-weight: 600;
+    width: auto;
+
+}

@@ -12,6 +12,8 @@ class PostContainer extends Component {
     }
     render() {
         const searchText = this.props.searchText;
+        const handleSubmit = this.handleSubmit;
+        const handleChange = this.handleChange;
         const posts = [];
         let lastPost = null;
         this.props.dummyData.forEach((post) => {
@@ -26,6 +28,8 @@ class PostContainer extends Component {
                         username={post.username}
                         comments={post.comments}
                         likes={post.likes}
+                        handleSubmit={this.handleSubmit}
+                        handleChange={this.handleChange}
                     />
                 );
             }

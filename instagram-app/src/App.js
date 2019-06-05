@@ -10,7 +10,8 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
-      searchText: ''
+      searchText: '',
+      commentText: ''
     };
     this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
   }
@@ -32,9 +33,31 @@ class App extends Component {
     });
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    if (!this.state.commentText.length) {
+      return;
+    }
+    const newcommentText = {
+      text: this.state.commentText,
+      username: 'bryant',  //this.state.username,
+      id: Date.now()
+    };
+    this.setState(state => ({
+      dummyData: state.items.concat(newcommentText),
+      text: ''
+    }));
+  }
+
+  handleChange(text) {
+    this.setState(state => ({
+      commentText: text
+    }));
+  }
+
 
   render () {
-    //const {dummyData} = this.state;
+    const { commentText } = this.state.commentText;
   return (
     
     <section className="App">
@@ -48,6 +71,9 @@ class App extends Component {
       <PostContainer
         dummyData={this.state.dummyData} 
         searchText={this.state.searchText}
+          text={commentText}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
       />
         </main>
       
