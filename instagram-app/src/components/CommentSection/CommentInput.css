@@ -16,28 +16,46 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.comment_text {
+.label_textarea {
+    width: 100%;
+}
+
+textarea.comment_text {
     height: 1.8rem;
+    max-height: 8rem;
+    resize: none;
+    width: 100%;
     background: 0 0;
     border: 0;
-    color: #262626;
+    color: #999;
     outline: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    cursor: text;
+
+
 }
 
-.Submit_button {
+.submit_button {
     opacity: .3;
-    pointer-events: none;
+    /* pointer-events: none; */
     border: 0;
     color: #3897f0;
-    display: inline;
     padding: 0;
     font-weight: 600;
-    width: auto;
-
+    background: 0 0;
+    cursor: pointer;
+    text-align: center;
+    /* user-select: none; */
+    outline: 0 !important;
+    font-size: 14px;
+    line-height: 18px;
 }

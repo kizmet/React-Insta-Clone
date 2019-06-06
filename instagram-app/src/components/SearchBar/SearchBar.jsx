@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './SearchBar.css';
 
-class SearchBar extends Component {
-    constructor(props) {
-        super(props);
-        this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
-    }
-    handleSearchTextChange(e) {
-        this.props.onSearchTextChange(e.target.value)
-    }
-    render () {
+const SearchBar = (props) => {
+    // constructor(props) {
+    //     super(props);
+    //     this.handleSearchTextChange = this.handleSearchTextChange.bind(this);
+    // }
+    // handleSearchTextChange(e) {
+    //     this.props.onSearchTextChange(e.target.value)
+    // }
+    // render () {
         return (
             <div className="search_bar_wrapper">
                 <div className="search_bar_component">
@@ -25,7 +25,8 @@ class SearchBar extends Component {
                          name="" 
                          id="" 
                          placeholder="Search" 
-                         onChange={this.handleSearchTextChange}
+                            //onChange={props.searchText}
+                            onKeyDown={props.searchPosts}   
                          />
                     </div>
                     <div className="search_bar_profile">
@@ -38,6 +39,6 @@ class SearchBar extends Component {
             </div>
         )
     }
-}
+
 
 export default SearchBar;

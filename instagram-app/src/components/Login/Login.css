@@ -1,0 +1,70 @@
+section {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+}
+
+.login_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_component {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    margin: 22px auto 12px;
+    background-size: 410px 396px;
+    background-position: 0 -97px;
+    background-image: url('https://www.instagram.com/static/bundles/es6/sprite_core_2x_6ba81dcece9b.png/6ba81dcece9b.png');
+    height: 51px;
+    width: 175px;
+}
+
+
+.login_inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.username_component {
+    display: flex;
+    flex-direction: row;
+}
+
+.username_label {
+    color: #999;
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    line-height: 36px;
+    user-select: none;
+}
+
+.password_component {
+    display: flex;
+    flex-direction: row;
+}
+
+.password_label {
+    color: #999;
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    line-height: 36px;
+    user-select: none;
+}

@@ -1,6 +1,9 @@
 .post_action_wrapper {
     width: 100%;
     display: flex;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
 }
 
 .action_icons {

@@ -1,51 +1,49 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
-import Posts from 'components/Posts/Posts';
+import Post from './Post';
 
-const isText = searchText => {
-    return isNaN(searchText.length);
-}
 
-class PostContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        const searchText = this.props.searchText;
-        const handleSubmit = this.handleSubmit;
-        const handleChange = this.handleChange;
-        const posts = [];
-        let lastPost = null;
-        this.props.dummyData.forEach((post) => {
-            if (post.username.indexOf(searchText) === -1) {
-                return;
-            }
-            if (post.id !== lastPost) {
-                posts.push(
-                    <Posts key={post.id}
-                        imageUrl={post.imageUrl}
-                        thumbnailUrl={post.thumbnailUrl}
-                        username={post.username}
-                        comments={post.comments}
-                        likes={post.likes}
-                        handleSubmit={this.handleSubmit}
-                        handleChange={this.handleChange}
-                    />
-                );
-            }
-            lastPost = post.id;
-        });
 
+const PostContainer = (props) => {
+    // constructor(props) {
+    //     super(props);
+    // }
+    // render() {
+    //     //const searchText = this.props.searchText;
+    //     //const dummyData = this.props.dummyData;
+    //     const theposts = [];
+    //     let lastPost = null;
+    //     this.props.posts.forEach((post) => {
+    //         if (post.username.indexOf(this.props.searchText) === -1) {
+    //             return;
+    //         }
+    //         if (post.imageUrl !== lastPost) {
+    //             theposts.push(
+    //                 <Posts 
+    //                 key={post.imageUrl}
+    //                 post={post}
+    //                 //comments={post.comments}
+
+    //                 />
+    //             );
+    //         }
+    //         lastPost = post.imageUrl;
+    //     });
+// const searchText = props.searchText;
+        // props.posts.forEach((post) => {
+        //     if (post.username.indexOf(props.searchText) === -1) {
+        //         return;
+        //     }
+        // }
         return (
             <div className="post_container">
                 <ul className="content">
-                    {posts}
+                    
+                    {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
                 </ul>
             </div>
         );
     }
-}
-
 
 
 export default PostContainer;

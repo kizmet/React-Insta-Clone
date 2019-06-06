@@ -39,6 +39,14 @@
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
+
+    margin-bottom: .8rem;
+}
+
+.comments {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
 }
 
 .likes_total {
@@ -46,8 +54,9 @@
     display: flex;
     font-size: 1.2rem;
     font-weight: 600;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
 }
 
-.comment_input {
-
-}
+.comment_input {}
