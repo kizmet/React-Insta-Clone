@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-
+import './Login.css'
 class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			username: '',
-		}
+			password: ''
+		};
 	}
 
-	componentDidMount() {
+	handleInputChange = e => {
+		this.setState({ [e.target.name]: e.target.value });
+	};
 
-		if (localStorage.getItem(this.state.username)) {
-			this.setState({
-				username: JSON.parse(localStorage.getItem(this.state.username))
-			})
-		} else {
-			this.login()
-		}
-	}
+	handleLoginSubmit = e => {
+		const user = this.state.username;
+		localStorage.setItem('user', user);
+		window.location.reload();
+	};
+
+
 
 	componentWillUnmount() {
 		this.login();
@@ -36,16 +38,26 @@ class Login extends Component {
 				<article>
 					<div className="login_wrapper">
 						<div className="login_component">
-							<h1>Instagram</h1>
+							<h1></h1>
 							<div className="login_inputs">
-								<form onSubmit={this.Login(this.value)} >
+								<form onSubmit={this.handleLoginSubmit} >
 								<div className="username_component">
 									<label className="username_label">Phone number, username or email</label>
-									<input autocapitalize="off" type="text" value="username" maxlength="75" />
+									<input autocapitalize="off" 
+									type="text" 
+									value={this.state.username} 
+									onChange={this.handleInputChange}
+									maxlength="75" 
+									/>
 								</div>
 								<div className="password_component">
 									<label className="password_label">Password</label>
-									<input autocapitalize="off" type="text" value="password" maxlength="75" />
+									<input autocapitalize="off" 
+									type="text" 
+									value={this.state.password}
+									onChange={this.handleInputChange}
+									maxlength="75" 
+									/>
 								</div>
 								</form>
 						</div>
