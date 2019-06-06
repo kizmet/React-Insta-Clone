@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PostPage from '../components/PostContainer/PostPage';
-import Login from '../components/Login/Login';
+
 
 const withAuthenticate = PostPage => Login =>
   class extends Component {
@@ -13,7 +12,7 @@ const withAuthenticate = PostPage => Login =>
 
 
     componentDidMount() {
-      if (!localStorage.getItem('username')) {
+      if (!localStorage.getItem('user')) {
         this.setState({ loggedIn: false });
       } else {
         this.setState({ loggedIn: true });

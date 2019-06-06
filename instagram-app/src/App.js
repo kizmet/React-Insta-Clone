@@ -13,9 +13,9 @@ class App extends Component {
 
   render () {
   return (
-    
+    <div className="app">
     <ComponentFromWithAuthentication />
-    
+    </div>
   );}
 }
 const ComponentFromWithAuthentication = withAuthenticate(PostPage)(Login);
