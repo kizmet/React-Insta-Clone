@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Login.css'
+import './Login.css';
+
 class Login extends Component {
 	constructor(props) {
 		super(props);
@@ -19,18 +20,16 @@ class Login extends Component {
 		window.location.reload();
 	};
 
+	// componentWillUnmount() {
+	// 	this.login();
+	// }
 
-
-	componentWillUnmount() {
-		this.login();
-	}
-
-	login = () => {
-		localStorage.setItem(
-			'username',
-			JSON.stringify(this.state.username)
-		)
-	}
+	// login = () => {
+	// 	localStorage.setItem(
+	// 		'username',
+	// 		JSON.stringify(this.state.username)
+	// 	)
+	// }
 
 	render() {
 		return (
