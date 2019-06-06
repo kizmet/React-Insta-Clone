@@ -24,7 +24,7 @@ class Login extends Component {
 
 	render() {
 		return (
-			<section>
+			<section className="login">
 				<article>
 						<div className="login_component">
 							<h1></h1>
@@ -33,11 +33,11 @@ class Login extends Component {
 								
 								>
 								<FormGroup>
-										<Label 
+										{/* <Label 
 										className="username_label" 
 										autosize= "false"
 										placeholder="Phone number, username or email"
-									></Label>	
+									></Label>	 */}
 									<Input 
 											type="text"
 										name="username"
@@ -50,11 +50,11 @@ class Login extends Component {
 									
 								</FormGroup>	
 								<FormGroup>
-										<label 
+										{/* <label 
 										className="password_label" 
 										placeholder="Password"
 										autosize="false"
-									></label>
+									></label> */}
 									<Input 
 									autoCapitalize="off"	
 										type="password"
@@ -69,7 +69,7 @@ class Login extends Component {
 									type="submit"
 									className="login_submit"
 									value="submit"
-										onSubmit={this.handleLoginSubmit}
+										onClick={this.handleLoginSubmit}
 									>
 										Login</Button>
 								</FormGroup>

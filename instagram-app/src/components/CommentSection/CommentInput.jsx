@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import './CommentInput.css';
+import styled from 'styled-components';
+
+const CommentInputComp = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 56px;
+    justify-content: center;
+    border-top: 1px solid #efefef;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: stretch;
+    `;
 
 const CommentInput = (props) => {
         return (
-            <div className="comment_input_component">
+            <CommentInputComp>
                 <form
                     className="comment_form"
                     onSubmit={props.submitComment}
@@ -32,7 +46,7 @@ const CommentInput = (props) => {
 
                 </form>
 
-            </div>
+            </CommentInputComp>
         )
     
 }

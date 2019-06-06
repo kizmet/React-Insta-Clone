@@ -1,9 +1,17 @@
 import React from 'react';
 import './PostActions.css'
+import styled from 'styled-components';
+
+const ActionsWrapper = styled.div`
+    display: flex;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
+`;
 
 export const PostActions = props => {
     return (
-    <div className="post_action_wrapper">
+        <ActionsWrapper>
         <img 
         className="action_icons" 
         onClick={props.incrementLike}
@@ -15,7 +23,7 @@ export const PostActions = props => {
         id="comment" 
         src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iTGF5ZXIgMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHg9IjBweCIgeT0iMHB4Ij48dGl0bGU+VW50aXRsZWQtMjwvdGl0bGU+PHBhdGggZD0iTTE1Ni4yOCw1MTJoLTAuMDljLTEzLjc5LDAtMjYtNi44Mi0zMi42NS0xOC4yNC0xMS4zNC0xOS4zNC0yLjItNDEuMTMsOC4yNC01OS45MWExNjQuMTUsMTY0LjE1LDAsMCwwLDE4LjUtNTMuNjFDMTA5LjcxLDM2NS43LDc1LDM0My4xLDQ5LjE0LDMxNC4yNiwxOC44OSwyODAuNTEsMi44OSwyNDAuNzEsMi44OSwxOTkuMTZjMC0yNy41OSw3LTU0LjMxLDIwLjg3LTc5LjRDMzYuODgsOTYsNTUuNTEsNzQuNzUsNzkuMTUsNTYuNiwxMjYuNywyMC4xLDE4OS41LDAsMjU2LDBTMzg1LjMxLDIwLjExLDQzMi44NSw1Ni42MkM0NTYuNDksNzQuNzcsNDc1LjEyLDk2LDQ4OC4yMywxMTkuOGMxMy44NSwyNS4xMSwyMC44Nyw1MS44NCwyMC44Nyw3OS40NSwwLDQyLjc2LTE2LjgxLDgzLjQ3LTQ4LjYyLDExNy43My0yOS44NywzMi4xNy03MC43OSw1Ni4xOS0xMTguNTgsNjkuNjUtNjAuODQsNTEuNzYtMTA3LjE4LDg3LjY2LTEzNy43NiwxMDYuNzJDMTc2LjUxLDUxMC41NiwxNjUsNTEyLDE1Ni4yOCw1MTJaTTI1Niw0MS4zNmMtNTcuNDQsMC0xMTEuMywxNy4wNy0xNTEuNjYsNDguMDUtMzguNzUsMjkuNzUtNjAuMDgsNjguNzItNjAuMDgsMTA5Ljc1LDAsNjQuMjIsNTMuOTQsMTIzLjIxLDEzNC4yMiwxNDYuNzhsMTUuODEsNC42NC0xLDE2LjQ1YTIwNS41OCwyMDUuNTgsMCwwLDEtMjUuMzYsODYuOTEsOTIuODgsOTIuODgsMCwwLDAtNy4zMywxNS43MmMxMS41MS00LDQ4LjE4LTIzLjgzLDE1OC0xMTcuNWwzLjU4LTMuMDUsNC41NS0xLjJjODQuMzYtMjIuMzUsMTQxLTgyLjA5LDE0MS0xNDguNjYsMC00MS4wNy0yMS4zNC04MC4wNy02MC4wOS0xMDkuODNDMzY3LjMxLDU4LjQzLDMxMy40NSw0MS4zNiwyNTYsNDEuMzZaIj48L3BhdGg+PC9zdmc+" alt="" 
         />
-    </div>
+        </ActionsWrapper>
 )}
 
 

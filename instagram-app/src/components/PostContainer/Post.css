@@ -34,20 +34,7 @@
     object-fit: cover;
 }
 
-.comment_component {
-    text-align: left;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
 
-    margin-bottom: .8rem;
-}
-
-.comments {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
-    margin-bottom: .8rem;
-}
 
 .likes_total {
     width: 100%;

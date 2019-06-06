@@ -1,8 +1,24 @@
-
 import React from 'react';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentComponent = styled.div`
+    text-align: left;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .8rem;
+    `;
+
+const Comments = styled.div`
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
+`;
+
+
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -51,21 +67,21 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment_component">
-                <div className="comments">
+            <CommentComponent>
+                <Comments>
                 {this.state.comments.map((c, i) =>
                     <Comment key={i} comment={c}
                     />
                 )}
-                </div>
-                <div className="comment_input">
+                </Comments>
+                <div className="">
                 <CommentInput
                     comment={this.state.comment}
                     submitComment={this.handleCommentSubmit}
                     changeComment={this.commentHandler}
                 />
                 </div>
-            </div>
+            </CommentComponent>
         );
     }
 }

@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 import './Post.css'
 import CommentSection from '../CommentSection/CommentSection'
 import {PostActions} from './PostActions';
-import CommentInput from '../CommentSection/CommentInput';
+import styled from 'styled-components';
 
-
+const ListItem = styled.li`
+    width: 100%;
+    padding: 0%;
+    background: white;
+    border: .1rem solid #e6e6e6;
+    border-radius: .3rem;
+    margin: 0;
+    margin-bottom: 6rem;
+`;
 
 class Posts extends Component {
     constructor(props) {
@@ -21,7 +29,7 @@ class Posts extends Component {
 
     render () {
     return (
-        <li className="li_wrapper">
+        <ListItem>
             <div className="title">
                 <img src={this.props.post.thumbnailUrl} alt=""/> 
                 <span id="post_username">{this.props.post.username}</span>
@@ -35,16 +43,13 @@ class Posts extends Component {
             <div className="likes_total">
                 {this.state.likes} likes
             </div>
-
-            {/* <div className="comment_component"> */}
                 <CommentSection
                     postId={this.props.post.imageUrl}
                     comments={this.props.post.comments}
                 />                
-            {/* </div> */}
 
 
-        </li>
+        </ListItem>
     )}
 }
 
