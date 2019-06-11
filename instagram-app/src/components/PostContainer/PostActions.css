@@ -1,0 +1,22 @@
+.post_action_wrapper {
+    width: 100%;
+    display: flex;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: .8rem;
+}
+
+.action_icons {
+
+    padding: .6rem;
+    padding-left: 0;
+}
+
+img#heart {
+    width: 2rem;
+}
+
+img#comment {
+    width: 1.8rem;
+
+}

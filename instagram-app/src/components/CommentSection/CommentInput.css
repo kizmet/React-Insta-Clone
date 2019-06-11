@@ -1,0 +1,61 @@
+.comment_input_component {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 56px;
+    justify-content: center;
+    border-top: 1px solid #efefef;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: stretch;
+
+}
+
+.comment_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.label_textarea {
+    width: 100%;
+}
+
+textarea.comment_text {
+    height: 1.8rem;
+    max-height: 8rem;
+    resize: none;
+    width: 100%;
+    background: 0 0;
+    border: 0;
+    color: #999;
+    outline: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    cursor: text;
+
+
+}
+
+.submit_button {
+    opacity: .3;
+    /* pointer-events: none; */
+    border: 0;
+    color: #3897f0;
+    padding: 0;
+    font-weight: 600;
+    background: 0 0;
+    cursor: pointer;
+    text-align: center;
+    /* user-select: none; */
+    outline: 0 !important;
+    font-size: 14px;
+    line-height: 18px;
+}

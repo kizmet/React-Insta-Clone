@@ -1,0 +1,33 @@
+
+
+section.App {
+    text-align: center;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+nav {
+    background-color: #fafafa;
+    padding: 0;
+    order: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+main {
+    background-color: #fafafa;
+    flex-grow: 1;
+    order:4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin:0;
+    padding:0;
+}

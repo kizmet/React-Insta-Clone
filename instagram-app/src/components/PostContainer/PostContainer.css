@@ -1,0 +1,19 @@
+.post_container {
+    padding-top: 12rem;
+    display: flex;
+    max-width: 93.5rem;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
